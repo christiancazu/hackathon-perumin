@@ -2,11 +2,11 @@
   <div>
     <q-header
       elevated
-      class="bg-white row justify-center q-py-sm"
+      class="row justify-center bg-white"
     >
-      <q-toolbar class="col-md-10 q-py-none">
+      <q-toolbar class="col-md-10">
         <q-btn
-          class="lt-md text-primary border-primary"
+          class="lt-md"
           flat outline dense round
           @click="leftDrawerOpen = !leftDrawerOpen"
           aria-label="Menu"
@@ -20,13 +20,14 @@
           stretch
           no-caps
           :class="{ 'full-width q-pl-none' : isScreenMd }"
+          style="max-width: 50px; max-heigth: 24px"
         >
 
-          <img :src="isScreenMd ? iconImgPath : avatarImgPath">
+          <!-- <img :src="isScreenMd ? iconImgPath : avatarImgPath"> -->
 
           <q-toolbar-title
             shrink
-            class="on-left" style="color: #000"
+            class="on-left text-black"
           >
             {{ appName }}
           </q-toolbar-title>
@@ -41,10 +42,10 @@
           :to="{ name: nav }"
           exact
           v-ripple
-          class="gt-sm text-capitalize"
+          class="gt-sm text-capitalize text-black"
         >
           <q-item-section>
-            <q-item-label class="color: #ccc">{{ $t(nav) }}</q-item-label>
+            <q-item-label>{{ $t(nav) }}</q-item-label>
           </q-item-section>
         </q-item>
 
@@ -92,7 +93,7 @@ export default {
       navs: ['home', 'evaluation', 'how'],
       appName: process.env.APP_NAME,
       leftDrawerOpen: !this.$q.platform.is.desktop,
-      avatarImgPath: 'statics/logo.png',
+      avatarImgPath: 'statics/logo.svg',
       iconImgPath: 'statics/icons/ba4dfc0ede2db9337c4fcf82bedf78d6.png'
     }
   },
@@ -106,7 +107,7 @@ export default {
 
 <style lang="stylus" scoped>
 /* navs text styles for active/no active link */
-.q-item {
+/*.q-item {
   color: #000;
   font-size: 16px;
   font-weight: 600;
@@ -119,5 +120,5 @@ export default {
 
 .border-primary {
   border: 1px solid $primary;
-}
+}*/
 </style>

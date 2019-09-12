@@ -4,12 +4,12 @@
     :menu-anchor="menuAnchor"
     flat stretch
     icon="language"
-    iconColor="red"
-    color="black"
+    class="text-black"
     :class="{
       'gt-sm': gtSm,
       'arrow-right full-width q-py-md': arrowRight
     }"
+    style="font-weight: inherit"
   >
     <q-list separator>
       <q-item
@@ -60,10 +60,13 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus">
 /* nav dropdown opacity no active */
 .q-btn__content {
-  opacity: .8
+  // opacity: .8
+}
+.q-icon {
+  font-weight: 100
 }
 /* customs modifications to arrow direction on dropdown */
 /* dropdown arrow */
