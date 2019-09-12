@@ -1,0 +1,44 @@
+// app global css
+
+body
+  background-color: $grey-2
+
+/* custom: arrow direction to right in dropdown and rotation animation */
+.arrow-right .q-btn-dropdown__arrow
+  transform: rotate(-90deg)
+
+/* arror rotation animation */
+.arrow-right .rotate-180
+  transform: rotate3d(0, 0, 1, 90deg)
+
+/* router-link page in-out transition */
+.page-enter-active, .page-leave-active
+  transition: opacity .3s ease
+
+.page-enter, .page-leave-to
+/* .page-leave-active below version 2.1.8 */
+  opacity: 0
+.q-header {
+  z-index: 1050
+}
+.swal2-popup.swal2-toast {
+  // box-shadow: 10px 4px 25px 105px rgba(0,0,0,0.75);
+}
+
+blockquote.q-markdown--primary {
+  border-width: 1px 4px 1px;
+  border-style: solid;
+  border-color: transparent $deep-orange-4;
+  background-color: $deep-orange-1;
+  color: $deep-orange-10;
+  border-radius: 4px;
+}
+
+blockquote.q-markdown--secondary {
+  border-width: 1px 4px 1px;
+  border-style: solid;
+  border-color: transparent $cyan-4;
+  background-color: $cyan-1;
+  color: $cyan-10;
+  border-radius: 4px;
+}
