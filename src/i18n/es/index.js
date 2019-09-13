@@ -1,4 +1,16 @@
 export default {
+  banner_tittle_one: {
+    primary: 'foo',
+    secondary: 'bar'
+  },
+  banner_tittle_two: {
+    primary: 'foo',
+    secondary: 'bar'
+  },
+  banner_tittle_tree: {
+    primary: 'foo',
+    secondary: 'bar'
+  },
   error: {
     problem: 'Ha ocurrido un problema',
     wrong_try_again: '¡Algo salió mal! Inténtalo de nuevo',

@@ -16,7 +16,8 @@ module.exports = function (ctx) {
       'axios',
       'components.loader',
       'vee-validate',
-      'swal'
+      'swal',
+      'wow'
     ],
 
     css: [
@@ -138,8 +139,8 @@ module.exports = function (ctx) {
       open: true // opens browser window automatically
     },
 
-    // animations: 'all', // --- includes all animations
-    animations: [],
+    animations: 'all', // --- includes all animations
+    // animations: [],
 
     ssr: {
       pwa: false

@@ -65,9 +65,6 @@ export default {
 .q-btn__content {
   // opacity: .8
 }
-.q-icon {
-  font-weight: 100
-}
 /* customs modifications to arrow direction on dropdown */
 /* dropdown arrow */
 

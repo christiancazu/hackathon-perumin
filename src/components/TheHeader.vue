@@ -6,7 +6,7 @@
     >
       <q-toolbar class="col-md-10">
         <q-btn
-          class="lt-md"
+          class="lt-md text-black"
           flat outline dense round
           @click="leftDrawerOpen = !leftDrawerOpen"
           aria-label="Menu"
@@ -92,7 +92,7 @@ export default {
     return {
       navs: ['home', 'evaluation', 'how'],
       appName: process.env.APP_NAME,
-      leftDrawerOpen: !this.$q.platform.is.desktop,
+      leftDrawerOpen: false,
       avatarImgPath: 'statics/logo.svg',
       iconImgPath: 'statics/icons/ba4dfc0ede2db9337c4fcf82bedf78d6.png'
     }
