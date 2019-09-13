@@ -1,29 +1,29 @@
 export default {
-  t_1: 'Responsabilidad Social',
-  m_1: 'La Responsabilidad Social Empresarial es la gestión ética de una empresa que busca la coherencia entre crecimiento económico, el soporte cultural, la equidad social y el cuidado del medio ambiente de un determinado lugar. En la industria minera, esta es la clave para la comunión de las empresas con las comunidades.',
-  t_2: '¿Por qué es necesario?',
-  m_2: 'No es nada nuevo decir que la Responsabilidad Social supone un valor añadido, pero también una obligación para las empresas mineras, las cuales se encuentran constantemente en tensión con comunidades o villas en las que se asienta un proyecto de excavación.\nA través de esta actividad, las empresas mineras contribuyen activamente con el desarrollo de las capacidades locales con las que conviven, con la protección del ambiente, con el respeto a las identidades culturales y con los valores sociales.',
-  t_3: 'El fin de estas prácticas',
-  m_3: 'Es buscar el desarrollo sostenible de los pueblos donde operan las empresas, a través del aporte social de la minería. Asimismo, brinda oportunidades de acceso a la población a diversos bienes y servicios. Al cubrir su necesidad de energía eléctrica hace factible la conexión de poblaciones alejadas a este servicio y al demandar mano de obra genera empleo directo e indirecto, a través de la demanda por bienes y servicios que proviene de los trabajadores y de la empresa minera.',
-  ttt_1: 'Minería sustentable',
-  mmm_1: 'Es el desarrollo que satisface las necesidades actuales de las personas sin comprometer la capacidad de las futuras generaciones para satisfacer las suyas. El impacto que genera la minería en el ambiente no es sinónimo de contaminación ya que puede prevenirse usando tecnología moderna e implementando programas de gestión ambiental y de responsabilidad social',
-  tt_1: 'Ecosistema',
+  t_1: 'Qallarinapaq akllaykuy',
+  m_1: 'Uchuy mapapi qampa llaqtaykita. Hinaspa akllaykuy hatun mapapi qampa rimasqayki simita Kaymi Quechua simi ayllupi tukuy simikunaman yaykuna punku. Kay ayllupiqa quechuasimikuna, qeshwa simikuna, qheswa simikuna, quichua simikuna, chaynataq inga simikunapas tarikun. Kunankamam kay yana numeropi chaynataq yana sutipi kachkan runa siminchikpi página yachaykunapaq Caica Quechua rimai aillupi tucui rimaicunaman yaicuna pungumi.',
+  t_2: 'Callaringapaj uchilla mapapi cambaj',
+  m_2: 'Caica Quechua rimai aillupi tucui rimaicunaman yaicuna pungumi. Cai aillupica quechua rimaicunapish quichua rimaicunapish inga rimaicunapishmi tiyan. Cunancama yana numerota yana letrata charij rimaicunallami paipaj quiquin p\'angata charin First select your home region on the small map. Then select the language you speak on the large map. This is the gateway to all the languages in the Quechuan language family, including Quechua, Quichua and Inga.',
+  t_3: 'Qallarinapaq akllaykuy',
+  m_3: 'Kaymi Quechua simi ayllupi tukuy simikunaman yaykuna punku. Kay ayllupiqa quechuasimikuna, qeshwa simikuna, qheswa simikuna, quichua simikuna, chaynataq  simikunapas tarikun. Kunankamam kay yana numeropi chaynataq yana sutipi kachkan runa siminchikpi página yachaykunapaq.',
+  ttt_1: 'huya rurana',
+  mmm_1: 'Kaymi Quechua simi ayllupi tukuy simikunaman yaykuna punku. Kay ayllupiqa quechuasimikuna, qeshwa simikuna, qheswa simikuna, quichua simikuna, chaynataq  simikunapas tarikun. Kunankamam kay yana numeropi chaynataq yana sutipi kachkan runa siminchikpi página yachaykunapaq.',
+  tt_1: 'Callaringapaj uchilla',
   tt_2: 'Social',
   tt_3: 'Economía',
   mm_1: 'Mining and environmental legislation\nRespect for the environment\nRigorous environmental studies\nNational and International Standards\nSystem environmental management',
   banner_tittle_one: {
-    primary: 'Minería con responsabilidad',
-    secondary: 'bar  español'
+    primary: 'Qhuya rurana',
+    secondary: 'bar  quechua'
   },
   banner_tittle_two: {
-    primary: 'foo  español',
-    secondary: 'bar  español'
+    primary: 'foo  quechua',
+    secondary: 'bar  quechua'
   },
   banner_tittle_tree: {
-    primary: 'foo  español',
-    secondary: 'bar  español'
+    primary: 'foo  quechua',
+    secondary: 'bar  quechua'
   },
-  read_more: 'Leer más',
+  read_more: 'liyiy ichaqa',
   error: {
     problem: 'Ha ocurrido un problema',
     wrong_try_again: '¡Algo salió mal! Inténtalo de nuevo',
@@ -38,12 +38,12 @@ export default {
     has_to_weight: 'La imagen debe pesar menos de {size} Mb',
     only_can_select: '¡Solo puede seleccionar imágenes!'
   },
-  responsability: 'responsabilidad',
-  home: 'inicio',
-  sustainable: 'sostenible',
-  suggestions: 'sugerencias',
+  responsability: 'rurana',
+  home: 'qallariy',
+  sustainable: 'mikhuchiy',
+  suggestions: 'qhawarichisqa',
   correct: 'Correcto',
-  test: 'prueba',
+  test: 'test',
   about: 'nosotros',
   upload_img: 'subir imagen',
   how: '¿cómo funciona?',

@@ -1,8 +1,12 @@
 <template>
   <div>
+    <q-scroll-observer @scroll="scrollHandler" />
+
     <q-header
-      elevated
-      class="row justify-center bg-white"
+      id="home"
+      :elevated="onScrollHeaderBg"
+      class="row justify-center"
+      :class="onScrollHeaderBg && $route.path === '/' ? 'fill-color' : 'fill-transparent'"
     >
       <q-toolbar class="col-md-10">
         <q-btn
@@ -16,21 +20,17 @@
 
         <q-btn
           :to="`${isScreenMd ? '' : '/'}`"
-          flat
-          stretch
-          no-caps
-          :class="{ 'full-width q-pl-none' : isScreenMd }"
+          flat stretch no-caps
+          :class="{
+            'full-width q-pl-none absolute-center' : isScreenMd
+          }"
+          class="flex"
           style="max-width: 50px; max-heigth: 24px"
         >
-
-          <!-- <img :src="isScreenMd ? iconImgPath : avatarImgPath"> -->
-
-          <q-toolbar-title
-            shrink
-            class="on-left text-black"
+          <img
+            :src="avatarImgPath"
+            :style="isScreenMd ? 'height: 48px' : 'height: 78px'"
           >
-            {{ appName }}
-          </q-toolbar-title>
         </q-btn>
 
         <q-space />
@@ -39,18 +39,26 @@
         <q-item
           v-for="nav in navs"
           :key="nav"
-          :to="{ name: nav }"
-          exact
-          v-ripple
-          class="gt-sm text-capitalize text-black"
+          clickable
+          @click="goTo(nav)"
+          class="gt-sm text-capitalize"
         >
           <q-item-section>
-            <q-item-label>{{ $t(nav) }}</q-item-label>
+            <q-item-label
+              class="text-h6 font-nav"
+              :class="{
+                'on-transparent-bg': onScrollHeaderBg,
+                'on-color-bg': !onScrollHeaderBg
+              }">
+              {{ $t(nav) }}
+            </q-item-label>
           </q-item-section>
         </q-item>
 
         <!-- locale-dropdown component -->
-        <locale-dropdown gt-sm />
+        <locale-dropdown
+          :on-scroll-header-bg="onScrollHeaderBg"
+          gt-sm />
 
       </q-toolbar>
     </q-header>
@@ -85,16 +93,49 @@
 </template>
 
 <script>
+import { scroll } from 'quasar'
+const { getScrollTarget, setScrollPosition } = scroll
+// takes an element object
+function scrollToElement (el) {
+  const target = getScrollTarget(el)
+  const offset = el.offsetTop
+  const duration = 500
+  setScrollPosition(target, offset, duration)
+}
+
 export default {
   name: 'TheHeader',
-
   data () {
     return {
-      navs: ['home', 'evaluation', 'how'],
+      navs: ['home', 'responsability', 'sustainable', 'suggestions'],
       appName: process.env.APP_NAME,
       leftDrawerOpen: false,
-      avatarImgPath: 'statics/logo.svg',
-      iconImgPath: 'statics/icons/ba4dfc0ede2db9337c4fcf82bedf78d6.png'
+      avatarImgPath: 'statics/logo.png',
+      iconImgPath: 'statics/icons/ba4dfc0ede2db9337c4fcf82bedf78d6.png',
+      sizeVH: 0,
+      onScrollHeaderBg: false
+    }
+  },
+  mounted () {
+    this.sizeVH = Math.max(document.documentElement.clientHeight, window.innerHeight)
+  },
+  watch: {
+    '$route.path' (val) {
+      console.log('val. :', val)
+    }
+  },
+  methods: {
+    scrollHandler ({ position }) {
+      console.log('info :', position)
+      if (position > this.sizeVH) {
+        this.onScrollHeaderBg = true
+      } else {
+        this.onScrollHeaderBg = false
+      }
+    },
+    goTo (el) {
+      console.log('el :', el)
+      scrollToElement(document.getElementById(el))
     }
   },
   computed: {
@@ -106,6 +147,11 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.fill-color
+  background-color: white
+.fill-transparent
+  background-color: transparent
+
 /* navs text styles for active/no active link */
 /*.q-item {
   color: #000;

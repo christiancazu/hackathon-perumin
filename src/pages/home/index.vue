@@ -3,59 +3,64 @@
 
     <banner-home />
 
-    <div class="row justify-center q-gutter-md">
-      <u-animate-container>
-        <u-animate
-          v-for="(card, index) in cards"
-          :key="index"
-          name="rollIn"
-          delay="0s"
-          duration="1s"
-          :iteration="1"
-          :offset="0"
-          animateClass="animated"
-          :begin="false"
-        >
-          <q-card
-          :key="index"
-          class="col-md-2"
-        >
-          <img src="https://cdn.quasar.dev/img/mountains.jpg">
-
-          <q-card-section>
-            <div class="text-h6">Our Changing Planet</div>
-            <div class="text-subtitle2">by John Doe</div>
-          </q-card-section>
-
-          <q-card-section>
-            lorem
-          </q-card-section>
-        </q-card>
-        </u-animate>
-      </u-animate-container>
+    <div id="responsability">
+      <section-info-home
+        v-for="(sih, index) in sectionInfoHome"
+        :key="index"
+        :reverse="sih.reverse"
+        :title="$t(`t_${index + 1}`)"
+        :text="$t(`m_${index + 1}`)"
+        :src="`statics/mine/${index + 1}.jpg`"
+      />
     </div>
+
+    <section-title :text="$t('ttt_1')"/>
+
+    <u-animate-container class="q-my-xl">
+    <u-animate
+      name="bounceIn"
+      delay=".5s"
+      duration="2s"
+      :iteration="1"
+      :offset="0"
+      animateClass="animated"
+      :begin="false"
+      class="col-xs-12"
+    >
+      <div class="q-mx-xl">
+        <block-quote type="secondary">
+          <p class="text-h5 q-pa-sm">{{ $t('mmm_1') }}</p>
+        </block-quote>
+      </div>
+    </u-animate>
+  </u-animate-container>
+
+    <section-info-sosteinable />
+
+    <section-suggestions />
+
   </q-page>
 </template>
+
 <script>
 export default {
   name: 'HomeIndex',
   data () {
     return {
       slide: 1,
-      cards: [
-        { foo: 'bar' },
-        { foo: 'bar' },
-        { foo: 'bar' },
-        { foo: 'bar' },
-        { foo: 'bar' },
-        { foo: 'bar' },
-        { foo: 'bar' },
-        { foo: 'bar' }
+      isScreenDesktop: this.$q.platform.is.desktop,
+      sectionInfoHome: [
+        { reverse: false, title: 'foo', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
+        { reverse: true, title: 'foo', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' },
+        { reverse: false, title: 'foo', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.' }
       ]
     }
   }
 }
 </script>
 
-<style>
+<style scope>
+.q-page-container {
+  padding-top: 0px !important
+}
 </style>

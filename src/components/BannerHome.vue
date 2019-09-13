@@ -2,9 +2,7 @@
     <q-carousel
       animated
       v-model="slide"
-      navigation
-      infinite
-      autoplay
+      navigation infinite autoplay
       transition-prev="slide-right"
       transition-next="slide-left"
       class="banner-full-screen"
@@ -18,13 +16,13 @@
       >
         <div class="q-mt-md text-center">
           <transition name="fadeOne">
-            <div v-show="bannerImg.showTittles" class="container">
-              <p class="One">{{ bannerImg.name }}</p>
+            <div v-show="bannerImgs[0].showTittles" class="container">
+              <p class="One">{{ $t(`banner_tittle_one.primary`) }}</p>
             </div>
             </transition>
             <transition name="fadeTwo">
-            <div v-show="bannerImg.showTittles" class="container">
-              <p class="Two">{{ bannerImg.src }}</p>
+            <div v-show="bannerImgs[0].showTittles" class="container">
+              <p class="Two">{{ $t(`banner_tittle_one.secondary`) }}</p>
             </div>
           </transition>
         </div>
@@ -38,9 +36,9 @@ export default {
     return {
       slide: 1,
       bannerImgs: [
-        { showTittles: false, name: 1, src: 'statics/mine/mine-1.jpg' },
-        { showTittles: false, name: 2, src: 'statics/mine/mine-2.jpg' },
-        { showTittles: false, name: 3, src: 'statics/mine/mine-3.jpg' }
+        { showTittles: false, name: 1, src: 'statics/mine/mine-1.jpg', order: 'one' },
+        { showTittles: false, name: 2, src: 'statics/mine/mine-2.jpg', order: 'two' },
+        { showTittles: false, name: 3, src: 'statics/mine/mine-3.jpg', order: 'tree' }
       ]
     }
   },
@@ -52,12 +50,12 @@ export default {
       setTimeout(() => {
         this.bannerImgs[0].showTittles = true
       }, 1000)
-      setTimeout(() => {
+      /* setTimeout(() => {
         this.bannerImgs[1].showTittles = true
       }, 6000)
       setTimeout(() => {
         this.bannerImgs[2].showTittles = true
-      }, 11000)
+      }, 11000) */
     }
   }
 }
@@ -65,7 +63,7 @@ export default {
 
 <style scoped>
 .banner-full-screen {
-  min-height: 100vh;
+  min-height: 95vh;
   min-width: 100vw;
   /* background-color: #000; */
 }
@@ -77,19 +75,18 @@ export default {
 }
 p {
   text-align: center;
-  font-size: 54px;
+  font-size: 72px;
   overflow: hidden;
   color: white;
+  font-weight: 400;
   margin: 1px;
   /* filter: opacity(1) !important; */
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 6px black;
 }
-
 .Two {
-  font-size: 36px;
+  font-size: 48px;
   font-family: Georgia, serif;
 }
-
 .fadeOne-enter-active, .fadeOne-leave-active {
   transition: all 1s ease-out;
 }
@@ -97,7 +94,6 @@ p {
   clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
   transform: translate(0%, 100%);
 }
-
 .fadeTwo-enter-active, .fadeTwo-leave-active {
   transition: all 1s ease-out;
 }

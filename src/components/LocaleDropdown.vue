@@ -4,12 +4,14 @@
     :menu-anchor="menuAnchor"
     flat stretch
     icon="language"
-    class="text-black"
+    class="text-h6"
     :class="{
       'gt-sm': gtSm,
-      'arrow-right full-width q-py-md': arrowRight
+      'arrow-right full-width q-py-md': arrowRight,
+      'on-transparent-bg': onScrollHeaderBg,
+      'on-color-bg': !onScrollHeaderBg
     }"
-    style="font-weight: inherit"
+    :style="arrowRight ? 'text-shadow: none' : ''"
   >
     <q-list separator>
       <q-item
@@ -36,7 +38,8 @@ export default {
 
   props: {
     gtSm: { type: Boolean, default: false }, // gt-sm class mode
-    arrowRight: { type: Boolean, default: false } // custom arrow direction
+    arrowRight: { type: Boolean, default: false }, // custom arrow direction
+    onScrollHeaderBg: { type: Boolean, default: false }
   },
   computed: {
     ...mapState('i18n', ['locale', 'locales']),
@@ -54,7 +57,7 @@ export default {
   },
   filters: {
     languageName (val) {
-      return val === 'en' ? 'ENglish' : 'ESpañol'
+      return val === 'en' ? 'English' : val === 'es' ? 'Español' : 'Quechua'
     }
   }
 }
