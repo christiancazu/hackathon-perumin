@@ -1,4 +1,5 @@
 export default {
+  voice_community: 'Kunka ankuqala',
   t_1: 'Qallarinapaq akllaykuy',
   m_1: 'Uchuy mapapi qampa llaqtaykita. Hinaspa akllaykuy hatun mapapi qampa rimasqayki simita Kaymi Quechua simi ayllupi tukuy simikunaman yaykuna punku. Kay ayllupiqa quechuasimikuna, qeshwa simikuna, qheswa simikuna, quichua simikuna, chaynataq inga simikunapas tarikun. Kunankamam kay yana numeropi chaynataq yana sutipi kachkan runa siminchikpi página yachaykunapaq Caica Quechua rimai aillupi tucui rimaicunaman yaicuna pungumi.',
   t_2: 'Callaringapaj uchilla mapapi cambaj',
@@ -8,12 +9,12 @@ export default {
   ttt_1: 'huya rurana',
   mmm_1: 'Kaymi Quechua simi ayllupi tukuy simikunaman yaykuna punku. Kay ayllupiqa quechuasimikuna, qeshwa simikuna, qheswa simikuna, quichua simikuna, chaynataq  simikunapas tarikun. Kunankamam kay yana numeropi chaynataq yana sutipi kachkan runa siminchikpi página yachaykunapaq.',
   tt_1: 'Callaringapaj uchilla',
-  tt_2: 'Social',
-  tt_3: 'Economía',
-  mm_1: 'Mining and environmental legislation\nRespect for the environment\nRigorous environmental studies\nNational and International Standards\nSystem environmental management',
+  tt_2: 'Atawqay',
+  tt_3: 'Atika',
+  mm_1: 'Kaymi Quechua simi ayllupi tukuy simikunaman yaykuna punku. Kay ayllup tukuy simikunaman yaykuna punku. Kay ayllupiqa quechuasimikuna, qeshwa simikuna',
   banner_tittle_one: {
     primary: 'Qhuya rurana',
-    secondary: 'bar  quechua'
+    secondary: 'Waki wichq\'ay'
   },
   banner_tittle_two: {
     primary: 'foo  quechua',

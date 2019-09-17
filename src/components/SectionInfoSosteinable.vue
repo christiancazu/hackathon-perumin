@@ -72,6 +72,7 @@
 
         <q-card-section>
           <img src="statics/mine/map.jpeg" style="height: 100%; width: 100%">
+          <img src="statics/mine/explicacion-leyenda.png" style="height: 100%; width: 100%">
         </q-card-section>
 
       </q-card>

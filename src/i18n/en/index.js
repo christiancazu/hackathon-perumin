@@ -1,4 +1,5 @@
 export default {
+  voice_community: 'Voice community',
   t_1: 'Social responsability',
   m_1: 'Corporate Social Responsibility is the ethical management of a company that seeks coherence between economic growth, cultural support, social equity and environmental care of a particular place. In the mining industry, this is the key to the communion of companies with communities.',
   t_2: 'Why it is necessary?',
@@ -10,10 +11,10 @@ export default {
   tt_1: 'Environmental',
   tt_2: 'Social',
   tt_3: 'Economic',
-  mm_1: 'Mining and environmental legislation\nRespect for the environment\nRigorous environmental studies\nNational and International Standards\nSystem environmental management',
+  mm_1: 'Kaymi Quechua simi ayllupi tukuy simikunaman yaykuna punku. Kay ayllup tukuy simikunaman yaykuna punku. Kay ayllupiqa quechuasimikuna, qeshwa simikuna',
   banner_tittle_one: {
     primary: 'Mining with responsability',
-    secondary: 'bar foo english'
+    secondary: 'Close community'
   },
   banner_tittle_two: {
     primary: 'foo foo english',

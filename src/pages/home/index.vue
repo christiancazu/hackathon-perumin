@@ -39,6 +39,17 @@
 
     <section-suggestions />
 
+    <div id="suggestions" class="text-center">
+      <q-btn
+        class="ff"
+        style="height: 96px; width: 96px; font-size: 64px"
+        fab
+        icon="volume_up"
+        color="primary" />
+        <h1>
+          {{ $t('voice_community') }}
+        </h1>
+    </div>
   </q-page>
 </template>
 
@@ -62,5 +73,8 @@ export default {
 <style scope>
 .q-page-container {
   padding-top: 0px !important
+}
+.ff {
+  font-size: 64px !important;
 }
 </style>

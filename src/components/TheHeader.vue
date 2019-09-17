@@ -134,7 +134,6 @@ export default {
       }
     },
     goTo (el) {
-      console.log('el :', el)
       scrollToElement(document.getElementById(el))
     }
   },

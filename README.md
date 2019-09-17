@@ -1,5 +1,3 @@
-# Facing Stress
+# HACKATHON PERUMIN APP WEB
 
-aplicación web-pwa para detectar niveles de estrés mediante el reconocimiento de atributos faciales
-
-### TODO: CONTENT
+aplicación web minería responsable

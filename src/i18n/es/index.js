@@ -1,4 +1,5 @@
 export default {
+  voice_community: 'La voz de la comunidad',
   t_1: 'Responsabilidad Social',
   m_1: 'La Responsabilidad Social Empresarial es la gestión ética de una empresa que busca la coherencia entre crecimiento económico, el soporte cultural, la equidad social y el cuidado del medio ambiente de un determinado lugar. En la industria minera, esta es la clave para la comunión de las empresas con las comunidades.',
   t_2: '¿Por qué es necesario?',
@@ -10,10 +11,10 @@ export default {
   tt_1: 'Ecosistema',
   tt_2: 'Social',
   tt_3: 'Economía',
-  mm_1: 'Mining and environmental legislation\nRespect for the environment\nRigorous environmental studies\nNational and International Standards\nSystem environmental management',
+  mm_1: 'Kaymi Quechua simi ayllupi tukuy simikunaman yaykuna punku. Kay ayllup tukuy simikunaman yaykuna punku. Kay ayllupiqa quechuasimikuna, qeshwa simikuna',
   banner_tittle_one: {
     primary: 'Minería con responsabilidad',
-    secondary: 'bar  español'
+    secondary: 'Comunidad cercana'
   },
   banner_tittle_two: {
     primary: 'foo  español',
@@ -40,7 +41,7 @@ export default {
   },
   responsability: 'responsabilidad',
   home: 'inicio',
-  sustainable: 'sostenible',
+  sustainable: 'Sostenibilidad',
   suggestions: 'sugerencias',
   correct: 'Correcto',
   test: 'prueba',
